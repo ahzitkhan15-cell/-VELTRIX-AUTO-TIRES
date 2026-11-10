@@ -92,11 +92,50 @@
       .finder-msg.show{display:block}
       .finder-msg b{color:#fff}
 
+      /* ---------- featured tire ---------- */
+      .featured{padding:30px 0 2px}
+      .featured-head{margin-bottom:18px}
+      .featured-head h2{font-size:30px;font-weight:900;margin:0;letter-spacing:-.01em;line-height:1}
+      .featured-row{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start}
+      /* item block (scoped to .vt-item) */
+      .vt-item{font-family:"Barlow",Arial,Helvetica,sans-serif;color:#1a1a1a;background:#fff;flex:0 1 380px;width:100%;max-width:380px;border:1px solid #e5e5e5;border-radius:10px;overflow:hidden}
+      .vt-item img{display:block;max-width:100%}
+      .vt-item .vt-photo{position:relative;background:#f4f4f4}
+      .vt-item .vt-photo-main{width:100%;aspect-ratio:1/1;object-fit:contain}
+      .vt-item .vt-thumbs{display:flex;gap:8px;justify-content:center;padding:10px 12px 0}
+      .vt-item .vt-thumbs img{width:56px;height:56px;object-fit:cover;border:2px solid #ddd;border-radius:6px;cursor:pointer;background:#fff}
+      .vt-item .vt-thumbs img.vt-active{border-color:#e10600}
+      .vt-item .vt-badges{display:flex;gap:8px;padding:14px 16px 0;flex-wrap:wrap}
+      .vt-item .vt-badge{font-size:11px;font-weight:700;letter-spacing:.04em;padding:4px 10px;border-radius:4px}
+      .vt-item .vt-badge-stock{background:#dcf5e3;color:#137333}
+      .vt-item .vt-badge-photos{background:#ececec;color:#555}
+      .vt-item .vt-body{padding:12px 16px 16px}
+      .vt-item .vt-brand{font-size:13px;letter-spacing:.14em;color:#666;font-weight:700}
+      .vt-item .vt-model{font-family:"Archivo",sans-serif;font-size:26px;font-weight:800;line-height:1.15;margin-top:2px}
+      .vt-item .vt-size{font-family:"Archivo",sans-serif;font-size:26px;font-weight:800;line-height:1.15}
+      .vt-item .vt-size .vt-rim{color:#e10600}
+      .vt-item .vt-meta{color:#666;font-size:14px;margin-top:6px}
+      .vt-item .vt-price{font-family:"Archivo",sans-serif;font-size:30px;font-weight:800;margin-top:12px}
+      .vt-item .vt-price small{font-family:"Barlow",sans-serif;font-size:15px;font-weight:400;color:#555}
+      .vt-item .vt-stock{color:#137333;font-weight:700;font-size:14px;margin-top:2px}
+      .vt-item .vt-specs{border:1px solid #ddd;border-radius:8px;margin-top:14px}
+      .vt-item .vt-specs summary{list-style:none;cursor:pointer;padding:12px 14px;font-weight:700;font-size:14px;letter-spacing:.05em;display:flex;justify-content:space-between;align-items:center}
+      .vt-item .vt-specs summary::-webkit-details-marker{display:none}
+      .vt-item .vt-specs summary .vt-caret{color:#888;font-size:12px}
+      .vt-item .vt-specs table{width:100%;border-collapse:collapse;font-size:14px}
+      .vt-item .vt-specs td{padding:10px 14px;border-top:1px solid #eee;vertical-align:top}
+      .vt-item .vt-specs td:first-child{color:#777;font-size:12px;letter-spacing:.06em;font-weight:700;width:42%}
+      .vt-item .vt-specs td:last-child{font-weight:700}
+      .vt-item .vt-btn{display:block;width:100%;margin-top:14px;background:#e10600;color:#fff;border:0;border-radius:6px;padding:14px 0;font-size:16px;font-weight:800;letter-spacing:.06em;cursor:pointer;text-align:center;text-decoration:none;font-family:"Archivo",sans-serif}
+      .vt-item .vt-btn:hover{background:#b80500}
+
       /* ---------- shop head ---------- */
       .shop-head{padding:34px 0 0}
       .shop-head .row{display:flex;align-items:flex-end;gap:26px;flex-wrap:wrap}
       .shop-head h1{font-size:44px;font-weight:900;margin:0;letter-spacing:-.015em;line-height:1}
       .shop-head .sub{margin:6px 0 2px;color:var(--muted);font-size:16.5px}
+      .shop-head .catalog-link{margin:8px 0 2px;font-size:15.5px;color:var(--muted)}
+      .shop-head .catalog-link a{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:3px}
       .tabs{display:flex;align-items:center;gap:4px;margin-left:8px;flex-wrap:wrap}
       .tabs button{background:none;border:0;font-size:15px;font-weight:500;color:var(--ink-2);padding:8px 13px;position:relative}
       .tabs button + button::before{content:"";position:absolute;left:-2px;top:50%;transform:translateY(-50%);width:1px;height:16px;background:var(--line)}
@@ -349,6 +388,8 @@
       }
       @media (max-width:960px){
         nav.main a:nth-child(1),nav.main a:nth-child(3),nav.main a:nth-child(4){display:none}
+        .site .wrap{flex-wrap:wrap;row-gap:10px}
+        nav.main{flex-wrap:wrap;row-gap:8px}
       }
       @media (max-width:760px){
         .wrap{padding:0 16px}
@@ -389,16 +430,17 @@
 
     <header class="site">
       <div class="wrap">
-        <a class="logo" href="#" aria-label="Veltrix Tires and Auto — home">
+        <a class="logo" href="https://muse.ai/s/front-page-for-the-tire-shop-xve6nw5xq58xwv/qBBXhcphOkGARoFX0VRDtpcJ10_H_f6jO4OyTDHFGR0" aria-label="Veltrix Tires and Auto — home">
           <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 6 L14 6 L20 22 L26 6 L38 6 L24 36 L16 36 Z" fill="#e01a2b"/></svg>
           <span class="word"><b>VELTRIX</b><small>TIRES &amp; AUTO</small></span>
         </a>
         <nav class="main" aria-label="Main">
-          <a href="#">Home</a>
+          <a href="https://muse.ai/s/front-page-for-the-tire-shop-xve6nw5xq58xwv/qBBXhcphOkGARoFX0VRDtpcJ10_H_f6jO4OyTDHFGR0">Home</a>
           <a href="#shop" class="active" aria-current="page">Shop Tires</a>
           <a href="#">Brands</a>
           <a href="#">Services</a>
           <a href="#">Contact</a>
+          <a href="https://veltrixtire.store/veltrix-tire/">Full catalog search</a>
           <button class="admin-btn" id="adminBtn" type="button" aria-expanded="false" aria-controls="adminPanel">Admin Panel</button>
           <button class="cart-btn" id="cartBtn" type="button" aria-label="Cart">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M2.5 3.5h2l2.6 11.2a1.5 1.5 0 0 0 1.46 1.15h7.9a1.5 1.5 0 0 0 1.46-1.13L20 7H6"/></svg>
@@ -767,12 +809,111 @@
       </div>
     </section>
 
+    <!-- Featured tire blocks: newest first. To feature another tire, paste its
+         .vt-item block at the top of .featured-row, above the existing ones. -->
+    <section class="featured" aria-label="Featured tire">
+      <div class="wrap">
+        <div class="featured-head">
+          <h2>Featured tire</h2>
+        </div>
+        <div class="featured-row">
+
+          <div class="vt-item">
+            <div class="vt-photo">
+              <img class="vt-photo-main"
+                src="https://portal.7llantas.com/web/image/product.image/7285/image_1024/Llanta%20P%20265-70%20R17%20115T%20Dohvan%20RHOJE%20R-T?unique=8fabf9c"
+                alt="DOHVAN RHOJE R/T LT275/70R18 tire">
+            </div>
+            <div class="vt-thumbs">
+              <img class="vt-active" onclick="vtSwap(this)"
+                src="https://portal.7llantas.com/web/image/product.image/7285/image_1024/Llanta%20P%20265-70%20R17%20115T%20Dohvan%20RHOJE%20R-T?unique=8fabf9c"
+                alt="DOHVAN RHOJE R/T — view 1">
+              <img onclick="vtSwap(this)"
+                src="https://portal.7llantas.com/web/image/product.image/7287/image_1024/Llanta%20P%20265-70%20R17%20115T%20Dohvan%20RHOJE%20R-T?unique=8fabf9c"
+                alt="DOHVAN RHOJE R/T — view 2">
+              <img onclick="vtSwap(this)"
+                src="https://7llantas2.xmarts.net/web/image/product.image/7286/image_1024/Llanta%20P%20265-70%20R17%20115T%20Dohvan%20RHOJE%20R-T?unique=8fabf9c"
+                alt="DOHVAN RHOJE R/T — view 3">
+            </div>
+
+            <div class="vt-badges">
+              <span class="vt-badge vt-badge-stock">IN STOCK</span>
+              <span class="vt-badge vt-badge-photos">3 PHOTOS</span>
+            </div>
+
+            <div class="vt-body">
+              <div class="vt-brand">DOHVAN</div>
+              <div class="vt-model">RHOJE R/T</div>
+              <div class="vt-size">LT275/70<span class="vt-rim">R18</span></div>
+
+              <div class="vt-meta">Light Truck &middot; Part 7503058016076 &middot; Service 125/122Q</div>
+
+              <div class="vt-price">$181.25 <small>per tire</small></div>
+              <div class="vt-stock">In stock &middot; 50 on hand</div>
+
+              <details class="vt-specs" open>
+                <summary>SPECIFICATIONS <span class="vt-caret">&#9660;</span></summary>
+                <table>
+                  <tr><td>TIRE SIZE</td><td>LT275/70R18</td></tr>
+                  <tr><td>SECTION WIDTH</td><td>275 mm &middot; 11 in</td></tr>
+                  <tr><td>RIM DIAMETER</td><td>18 inch</td></tr>
+                  <tr><td>OVERALL DIAMETER</td><td>33.2 in &middot; 843 mm</td></tr>
+                  <tr><td>WEIGHT</td><td>54.2 lb &middot; 24.58 kg</td></tr>
+                  <tr><td>TREAD DEPTH</td><td>16.19/32 in &middot; 12.85 mm</td></tr>
+                  <tr><td>CONSTRUCTION</td><td>Radial</td></tr>
+                  <tr><td>LOAD INDEX</td><td>125 &mdash; up to 3748 lb / 1700 kg per tire</td></tr>
+                  <tr><td>SPEED RATING</td><td>Q &mdash; up to 99 mph / 159 km/h</td></tr>
+                  <tr><td>MAX PRESSURE</td><td>80 psi &middot; 552 kPa</td></tr>
+                  <tr><td>LOAD RANGE</td><td>E</td></tr>
+                  <tr><td>SERVICE DESC.</td><td>125/122Q</td></tr>
+                  <tr><td>CATEGORY</td><td>Light Truck</td></tr>
+                  <tr><td>PART NUMBER</td><td>7503058016076</td></tr>
+                  <tr><td>FEED ID</td><td>TIRELINK-7503058016076</td></tr>
+                </table>
+              </details>
+
+              <a class="vt-btn" href="#shop" data-vt-search="7503058016076" onclick="return vtViewSizes(this, event)">VIEW SIZES</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Featured tire blocks: clicking a thumbnail swaps that block's main photo.
+      function vtSwap(el){
+        var item = el.closest ? el.closest(".vt-item") : null;
+        if(!item) return;
+        var main = item.querySelector(".vt-photo-main");
+        if(main) main.src = el.src;
+        var thumbs = el.parentNode.querySelectorAll("img");
+        for(var i = 0; i < thumbs.length; i++) thumbs[i].classList.remove("vt-active");
+        el.classList.add("vt-active");
+      }
+      // VIEW SIZES: filter the shop below to this tire and scroll to it.
+      function vtViewSizes(el, ev){
+        if(ev) ev.preventDefault();
+        var reset = document.getElementById("resetBtn");
+        if(reset) reset.click();
+        var input = document.getElementById("searchInput");
+        if(input){
+          input.value = el.getAttribute("data-vt-search") || "";
+          input.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+        var shop = document.getElementById("shop");
+        if(shop) shop.scrollIntoView();
+        return false;
+      }
+    </script>
+
     <main class="wrap" id="shop">
       <div class="shop-head">
         <div class="row">
           <div>
             <h1>Shop tires</h1>
             <p class="sub">The full Meta Catalog feed — all 4,027 import-ready listings with their feed prices, photos, and specs</p>
+            <p class="catalog-link">Not in this feed? <a href="https://veltrixtire.store/veltrix-tire/">Search the full catalog — all 5,473 tires</a></p>
           </div>
           <div class="tabs" role="group" aria-label="Category" id="catTabs"></div>
           <div class="sort">
